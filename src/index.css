@@ -1,0 +1,106 @@
+/* Main container */
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+    margin-top: 100px;
+    padding: 20px;
+    border-radius: 15px;
+    width: 90%;
+    max-width: 400px;
+    background: linear-gradient(to right, #6a11cb, #2575fc);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    color: white;
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+/* Search box */
+.Search {
+    width: 80%;
+    padding: 10px;
+    border-radius: 25px;
+    border: none;
+    outline: none;
+    font-size: 16px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.Search:focus {
+    transform: scale(1.05);
+}
+
+/* Location heading */
+.child2 {
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+    color: #ffeb3b;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+/* Temperature display */
+.child1 {
+    font-size: 48px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    text-align: center;
+    animation: bounceIn 1s;
+}
+
+/* Min and max temperature */
+.child3 {
+    font-size: 18px;
+    text-align: center;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes bounceIn {
+    0% {
+        transform: scale(0.5);
+        opacity: 0.5;
+    }
+
+    50% {
+        transform: scale(1.2);
+        opacity: 1;
+    }
+
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+/* Responsive adjustments */
+@media (max-width: 500px) {
+    .container {
+        width: 95%;
+        margin-top: 50px;
+    }
+
+    .Search {
+        width: 90%;
+    }
+
+    .child1 {
+        font-size: 36px;
+    }
+
+    .child3 {
+        font-size: 16px;
+    }
+}
